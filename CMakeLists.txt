@@ -7,4 +7,4 @@ include_directories(include)
 
 
 add_executable(yx_ip main.c
-        include/basic.h include/syshead.h include/taptun_if.h src/taptun_if.c include/utils.h src/utils.c include/netdev.h include/skbuff.h include/route.h include/list.h include/ethernet.h src/skbuff.c include/arp.h)
+        include/basic.h include/syshead.h include/taptun_if.h src/taptun_if.c include/utils.h src/utils.c include/netdev.h include/skbuff.h include/route.h include/list.h include/ethernet.h src/skbuff.c include/arp.h src/arp.c src/netdev.c include/ip.h)

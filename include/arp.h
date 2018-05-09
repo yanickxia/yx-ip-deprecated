@@ -25,6 +25,8 @@
 #define ARP_WAITING     1
 #define ARP_RESOLVED    2
 
+#define DEBUG_ARP
+
 #ifdef DEBUG_ARP
 #define arp_dbg(str, hdr)                                               \
     do {                                                                \
