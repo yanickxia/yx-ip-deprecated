@@ -13,6 +13,8 @@
 
 #define ETH_HDR_LEN sizeof(struct eth_hdr)
 
+#define DEBUG_ETH 1
+
 #ifdef DEBUG_ETH
 #define eth_dbg(msg, hdr)                                               \
     do {                                                                \
@@ -24,8 +26,13 @@
                     hdr->dmac[4], hdr->dmac[5], hdr->smac[0], hdr->smac[1], \
                     hdr->smac[2], hdr->smac[3], hdr->smac[4], hdr->smac[5], hdr->ethertype); \
     } while (0)
+#define binary_dbg(data)                                    \
+    do {                                                    \
+        print_debug("binary data %s", data)                 \
+    }while(0)
 #else
 #define eth_dbg(msg, hdr)
+#define binary_dbg(data)
 #endif
 
 struct sk_buff;
